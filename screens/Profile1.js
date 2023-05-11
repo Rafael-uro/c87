@@ -13,8 +13,6 @@ import { RFValue } from "react-native-responsive-fontsize";
 import * as Font from "expo-font";
 
 import firebase from "firebase";
-import * as SplashScreen from 'expo-splash-screen';
-SplashScreen.preventAutoHideAsync();
 
 
 export default class Profile extends Component {
@@ -73,7 +71,7 @@ export default class Profile extends Component {
 
   render() {
     if (this.state.fontsLoaded) {
-      SplashScreen.hideAsync();
+   
       return (
         <View
           style={
@@ -96,7 +94,7 @@ export default class Profile extends Component {
                     : styles.appTitleText
                 }
               >
-                Storytelling App
+                Espectagram
               </Text>
             </View>
           </View>
@@ -151,7 +149,7 @@ export default class Profile extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#15193c"
+    backgroundColor: "#020202"
   },
   containerLight: {
     flex: 1,
@@ -181,12 +179,10 @@ const styles = StyleSheet.create({
   appTitleText: {
     color: "white",
     fontSize: RFValue(28),
-  
   },
   appTitleTextLight: {
     color: "black",
     fontSize: RFValue(28),
-   
   },
   screenContainer: {
     flex: 0.85
@@ -205,13 +201,11 @@ const styles = StyleSheet.create({
   nameText: {
     color: "white",
     fontSize: RFValue(40),
-  
     marginTop: RFValue(10)
   },
   nameTextLight: {
     color: "black",
     fontSize: RFValue(40),
-   
     marginTop: RFValue(10)
   },
   themeContainer: {
@@ -223,13 +217,11 @@ const styles = StyleSheet.create({
   themeText: {
     color: "white",
     fontSize: RFValue(30),
-  
     marginRight: RFValue(15)
   },
   themeTextLight: {
     color: "black",
     fontSize: RFValue(30),
-   
     marginRight: RFValue(15)
   }
 });
